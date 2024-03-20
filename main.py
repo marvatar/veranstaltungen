@@ -48,6 +48,8 @@ def main():
             label = "Datei auswählen",
             type = ['xlsx'],
         )
+        if uploaded_file is not None:
+            base_df = pd.read_excel(uploaded_file)
 
         scol1, scol2, scol3 = st.columns(3)
         with scol1:
