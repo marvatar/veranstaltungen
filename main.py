@@ -29,7 +29,7 @@ def main():
         base_df = get_veranstaltungsliste()
     except ImportError:
         data = {
-            'Bibliothek' : ['Tom', 'nick', 'krish', 'jack'],
+            'Bibliothek' : ['Sendling', 'Bogenhausen', 'Giesing', 'Pasing'],
             'Veranstaltungsmerkmal' : ['offen', 'geschlossen', 'geschlossen, 'geschlossen'],
             'Teilnehmer gesamt' : [115,120,125,4],
         }
