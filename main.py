@@ -25,7 +25,16 @@ def main():
 
 #################################################
 
-    base_df = get_veranstaltungsliste()
+    try:
+        base_df = get_veranstaltungsliste()
+    except ImportError:
+        data = {
+            'Bibliothek' : ['Tom', 'nick', 'krish', 'jack'],
+            'Veranstaltungsmerkmal' : ['offen', 'geschlossen', 'geschlossen, 'geschlossen'],
+            'Teilnehmer gesamt' : [115,120,125,4],
+        }
+ 
+        base_df = pd.DataFrame(data)
 
     lst_stbs = base_df['Bibliothek'].unique()
     lst_stbs = np.append("Alle", lst_stbs)
