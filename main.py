@@ -30,7 +30,7 @@ def main():
     except ImportError:
         data = {
             'Bibliothek' : ['Sendling', 'Bogenhausen', 'Giesing', 'Pasing'],
-            'Veranstaltungsmerkmal' : ['offen', 'geschlossen', 'geschlossen, 'geschlossen'],
+            'Veranstaltungsmerkmal' : ['offen', 'geschlossen', 'geschlossen', 'geschlossen'],
             'Teilnehmer gesamt' : [115,120,125,4],
         }
  
