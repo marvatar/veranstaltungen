@@ -44,6 +44,10 @@ def main():
 
     with container02:
         #slider_input = st.slider('My slider', 0, 10, 5, key='my_slider')
+        uploaded_file = st.file_uploader(
+            label = "Datei auswählen",
+            type = ['xlsx'],
+        )
 
         scol1, scol2, scol3 = st.columns(3)
         with scol1:
