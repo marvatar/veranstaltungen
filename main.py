@@ -19,7 +19,7 @@ def get_veranstaltungsliste() -> pd.DataFrame:
 def main():
     b1, b2, b3 = st.columns(3)
     with b1:
-        st.image(Path.cwd() / "MSB_Logo_kurz.png", width=100, output_format="PNG")
+        st.image(Path.cwd() / "MSB_Logo_kurz.jpg", width=100)
         
     st.title("Veranstaltungen der STB München")
 
