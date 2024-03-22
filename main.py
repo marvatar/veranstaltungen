@@ -29,36 +29,37 @@ def main():
 
 #################################################
 
-#    try:
-#        base_df = get_veranstaltungsliste()
-#    except ImportError:
-    data = {
+    try:
+        base_df = get_veranstaltungsliste()
+    except ImportError:
+        data = {
             'Bibliothek' : ['Sendling', 'Bogenhausen', 'Giesing', 'Pasing'],
             'Veranstaltungsmerkmal' : ['offen', 'geschlossen', 'geschlossen', 'geschlossen'],
             'Teilnehmer gesamt' : [115,120,125,4],
-    }
- 
+        }
+        base_df = pd.DataFrame(data)
+
+    lst_stbs = base_df['Bibliothek'].unique()
+    lst_stbs = np.append("Alle", lst_stbs)
+
+    lst_vmss = base_df['Veranstaltungsmerkmal'].unique()
+    lst_vmss = np.append("Alle", lst_vmss)
+
+#################################################
+    
     with container02:
         #slider_input = st.slider('My slider', 0, 10, 5, key='my_slider')
 
-        st.write(Path.cwd())
+        #st.write(Path.cwd())
         
-        uploaded_file = st.file_uploader(
-            label = "Datei auswählen",
-            type = ['xlsx'],
-        )
-        if uploaded_file is not None:
-            base_df = pd.read_excel(uploaded_file)
-        else:
-            base_df = pd.DataFrame(data)
-
-        lst_stbs = base_df['Bibliothek'].unique()
-        lst_stbs = np.append("Alle", lst_stbs)
-
-        lst_vmss = base_df['Veranstaltungsmerkmal'].unique()
-        lst_vmss = np.append("Alle", lst_vmss)
-
-        
+        #uploaded_file = st.file_uploader(
+        #    label = "Datei auswählen",
+        #    type = ['xlsx'],
+        #)
+        #if uploaded_file is not None:
+        #    base_df = pd.read_excel(uploaded_file)
+        #else:
+                
         scol1, scol2, scol3 = st.columns(3)
         with scol1:
             select_stbs = st.selectbox('Stadtbibliothek auswählen', lst_stbs)
