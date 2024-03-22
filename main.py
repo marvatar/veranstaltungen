@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 import os
+from pathlib import Path
 
 #################################################
 
@@ -40,7 +41,7 @@ def main():
     with container02:
         #slider_input = st.slider('My slider', 0, 10, 5, key='my_slider')
 
-        st.write(os.getcwd())
+        st.write(Path.cwd())
         
         uploaded_file = st.file_uploader(
             label = "Datei auswählen",
