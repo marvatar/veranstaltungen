@@ -31,9 +31,7 @@ def main():
 
     container02 = st.container(border=True)
 
-    st.divider()
-
-    container03 = st.container(border=True, height=500)
+    container03 = st.container(height=500)
     
 #################################################
 
