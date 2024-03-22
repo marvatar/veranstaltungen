@@ -21,7 +21,7 @@ def main():
     with b1:
         st.image(str(Path.cwd() / "MSB_Logo_kurz.jpg"), width=100)
     with b2:    
-        st.title("Veranstaltungen der STB München")
+        st.title("Veranstaltungen der Münchner Stadtbibliothek in 2023")
 
     st.divider()
 
