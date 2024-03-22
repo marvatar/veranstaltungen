@@ -3,11 +3,14 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
+import os
+
 #################################################
 
 @st.cache_data
 def get_veranstaltungsliste() -> pd.DataFrame:
-    input_df = pd.read_excel("Veranstaltungen_v1.xlsx")
+#    input_df = pd.read_excel("Veranstaltungen_v1.xlsx")
+    input_df = pd.read_excel("dash.xlsx")
     return input_df
 
 #################################################
@@ -37,6 +40,8 @@ def main():
     with container02:
         #slider_input = st.slider('My slider', 0, 10, 5, key='my_slider')
 
+        st.write(os.getcwd())
+        
         uploaded_file = st.file_uploader(
             label = "Datei auswählen",
             type = ['xlsx'],
