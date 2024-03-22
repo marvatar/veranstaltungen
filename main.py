@@ -17,7 +17,7 @@ def get_veranstaltungsliste() -> pd.DataFrame:
 #################################################
 
 def main():
-    b1, b2, b3 = st.columns(3)
+    b1, b2 = st.columns([1,3])
     with b1:
         st.image(str(Path.cwd() / "MSB_Logo_kurz.jpg"), width=100)
     with b2:    
