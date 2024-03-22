@@ -31,6 +31,10 @@ def main():
 
     container02 = st.container(border=True)
 
+    st.divider()
+
+    container03 = st.container(border=True, height=500)
+    
 #################################################
 
     try:
@@ -96,8 +100,9 @@ def main():
 
         anz_vas = df_show.shape[0]
         anz_tns = df_show['Teilnehmer gesamt'].sum()
-
-        st.write(df_show)
+    
+    with container03:
+        st.dataframe(df_show)
 
     with container01:
         c1, c2, c3, c4, c5 = st.columns(5)
