@@ -102,7 +102,7 @@ def main():
 if __name__ == "__main__":
     st.set_page_config(
     page_title="Veranstaltungen der STB München",
-    page_icon="👋",
+    page_icon=":books:",
     layout="wide",
 
     )
