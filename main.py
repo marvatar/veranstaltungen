@@ -11,7 +11,7 @@ from pathlib import Path
 @st.cache_data
 def get_veranstaltungsliste() -> pd.DataFrame:
 #    input_df = pd.read_excel("Veranstaltungen_v1.xlsx")
-    input_df = pd.read_excel("dash.xlsx")
+    input_df = pd.read_excel(Path.cwd() / "dash.xlsx")
     return input_df
 
 #################################################
