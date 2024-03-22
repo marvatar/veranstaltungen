@@ -49,6 +49,10 @@ def main():
     lst_vmss = base_df['Veranstaltungsmerkmal'].unique()
     lst_vmss = np.append("Alle", lst_vmss)
 
+    lst_vmrh = base_df['Veranstaltungsreihe'].unique()
+    lst_vmrh = np.append("Alle", lst_vmrh)
+
+    
 #################################################
     
     with container02:
@@ -70,6 +74,7 @@ def main():
 
         with scol3:
             select_vmss = st.selectbox('Veranstaltungsmerkmal auswählen', lst_vmss)
+            select_vmrh = st.selectbox('Veranstaltungsreihe auswählen', lst_vmrh)
 
         if select_stbs != "Alle":
             #st.write(f"{select_stbs}")
@@ -80,6 +85,11 @@ def main():
 
         if select_vmss != "Alle":
             df_show = df_show[df_show['Veranstaltungsmerkmal'] == select_vmss]
+        else:
+            df_show = df_show.copy()
+
+        if select_vmrh != "Alle":
+            df_show = df_show[df_show['Veranstaltungsreihe'] == select_vmrh]
         else:
             df_show = df_show.copy()
 
