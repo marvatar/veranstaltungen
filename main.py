@@ -103,7 +103,7 @@ def main():
 
     ###
         df_va_months = df_show['Monat'].value_counts().sort_index().reset_index()
-        df_va_months.rename(columns={'index': 'Monat', 'Monat': 'Anzahl'}, inplace=True)
+        #df_va_months.rename(columns={'index': 'Monat', 'Monat': 'Anzahl'}, inplace=True)
 
         df_tn_months = df_show.groupby(df_show['Monat'])['Teilnehmer gesamt'].sum().reset_index()
 
