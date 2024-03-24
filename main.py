@@ -116,7 +116,7 @@ def main():
 #
  ##       fig01.update_traces(
   #          textposition='outside',
-        )
+        #)
 
     ###
         fig02 = px.bar(
