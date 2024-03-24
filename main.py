@@ -107,15 +107,15 @@ def main():
 
         df_tn_months = df_show.groupby(df_show['Monat'])['Teilnehmer gesamt'].sum().reset_index()
 
-        fig01 = px.bar(
-            df_va_months,
-            x = 'Monat',
-            y = 'Anzahl',
-            text_auto=True,
-        )
-
-        fig01.update_traces(
-            textposition='outside',
+        #fig01 = px.bar(
+        #    df_va_months,
+        #    x = 'Monat',
+        #    y = 'Anzahl',
+        #    text_auto=True,
+        #)
+#
+ ##       fig01.update_traces(
+  #          textposition='outside',
         )
 
     ###
@@ -140,7 +140,8 @@ def main():
     with container03:
         tcol1, tcol2 = st.columns(2)
         with tcol1:
-            st.plotly_chart(fig01)
+            st.write(df_va_months)
+            #st.plotly_chart(fig01)
         with tcol2:
             #st.write(df_tn_months)
             st.plotly_chart(fig02)
