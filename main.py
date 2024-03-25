@@ -85,11 +85,11 @@ def main():
             df_show = base_df.copy()
 
         if select_mons != "Alle":
-            #st.write(f"{select_stbs}")
-            df_show = base_df[base_df['Quartal'] == select_mons]
+            #st.write(f"{select_mons}")
+            df_show = df_show[df_show['Quartal'] == select_mons]
         else:
             #st.write("Alle Anderen")
-            df_show = base_df.copy()
+            df_show = df_show.copy()
 
         if select_vmss != "Alle":
             df_show = df_show[df_show['Veranstaltungsmerkmal'] == select_vmss]
